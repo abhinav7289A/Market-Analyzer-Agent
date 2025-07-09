@@ -11,6 +11,7 @@ langsmith
 openai
 anthropic
 serpapi
+google-search-results
 newsapi-python
 
 # Web App
