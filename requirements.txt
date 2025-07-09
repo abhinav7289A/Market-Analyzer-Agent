@@ -10,7 +10,7 @@ langsmith
 # LLM APIs
 openai
 anthropic
-serpapi
+google-search-results==2.4.2
 google-search-results
 newsapi-python
 
