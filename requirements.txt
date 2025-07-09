@@ -1,6 +1,41 @@
-streamlit
-python-dotenv
+# Core agents + LangChain
+langchain
+langchain-community
+langchain-core
+langchain-openai
+langgraph
+langgraph-sdk
+langsmith
+
+# LLM APIs
 openai
 anthropic
-langchain
-langgraph
+serpapi
+newsapi-python
+
+# Web App
+streamlit
+watchdog
+python-dotenv
+
+# Data & Plotting
+pandas
+matplotlib
+numpy
+
+# Text & Tokenization
+tiktoken
+beautifulsoup4
+
+# Optional LLM support
+requests
+httpx
+orjson
+
+# Required by some LangChain tools
+pydantic
+pydantic-settings
+typing-extensions
+
+# Reddit support (if you’re using praw for Reddit search)
+praw
