@@ -16,6 +16,7 @@ def run_market_research_workflow(state: ResearchState) -> ResearchState:
     Orchestrator: state must contain 'topic' key prior to calling.
     """
     # Phase 1: Research
+    print("▶️ [workflow entry] state:", state)
     state = run_researcher(state)
     if "error" in state:
         return state
