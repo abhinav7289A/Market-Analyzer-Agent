@@ -1,25 +1,33 @@
-import sys, os
-# Ensure project root is on path
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-
+import sys
+import os
 import streamlit as st
+
+# Ensure parent dir is in sys.path so imports work
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
 from workflow.graph import run_market_research_workflow
-from workflow.state import ResearchState
 
-st.set_page_config(page_title="Multi‑Agent Market Research", layout="centered")
+st.set_page_config(page_title="📊 Market Analyzer", layout="centered")
 
-st.title("Multi‑Agent Market Research System")
+st.title("📊 Market Analyzer")
+st.markdown("This app uses autonomous AI agents to research and generate detailed market reports.")
 
-# User input for research topic
-topic = st.text_input(
-    "Enter your research topic:",
-    value="consumer-grade drones in North America, last 6 months"
-)
+# User input
+user_topic = st.text_input("Enter a topic (e.g., 'consumer drones')")
 
 if st.button("Generate Report"):
-    with st.spinner("Running multi-agent workflow..."):
-        final_state: ResearchState = run_market_research_workflow(topic)
-        if "report" in final_state:
-            st.markdown(final_state["report"])
+    if not user_topic.strip():
+        st.error("⚠️ Please enter a topic before generating the report.")
+    else:
+        with st.spinner("🔎 Running multi-agent workflow..."):
+            # Construct input state
+            initial_state = {"raw_data": user_topic.strip()}
+            result = run_market_research_workflow(initial_state)
+
+        if "report" in result:
+            st.success("✅ Report Generated!")
+            st.markdown(result["report"])
+        elif "error" in result:
+            st.error(f"❌ Workflow failed: {result['error']}")
         else:
-            st.error(f"Workflow failed: {final_state.get('error')}")
+            st.error("❌ Unknown failure occurred during the workflow.")
