@@ -9,6 +9,7 @@ load_dotenv()
 API_KEY = os.getenv("SERPER_API_KEY") or os.getenv("SERPAPI_KEY")
 
 def run_researcher(state: ResearchState) -> ResearchState:
+    print("🔍 [run_researcher] incoming state:", state)
     topic = state.get("topic", "")
     if not topic:
         state["error"] = "No topic provided to researcher agent."
