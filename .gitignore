@@ -1,0 +1,19 @@
+# Ignore virtual environments
+venv/
+.venv/
+env/
+ENV/
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignore dotenv
+.env
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# Ignore Streamlit secrets
+.streamlit/secrets.toml

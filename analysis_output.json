@@ -1,0 +1,23 @@
+{
+  "trends": [
+    "Increasing adoption of drones for recreational and hobby use",
+    "Growing demand for aerial photography and videography",
+    "Regulatory scrutiny and concerns over data privacy and security",
+    "Technological advancements enabling longer flight times and enhanced capabilities"
+  ],
+  "competitors": [
+    "DJI",
+    "Parrot",
+    "Autel Robotics",
+    "Yuneec"
+  ],
+  "sentiment": "Consumer sentiment is positive due to the increasing popularity of drones for recreational use, but tempered by regulatory concerns and privacy issues.",
+  "market_size": "USD 19.6B in 2024",
+  "cagr": "8.3% CAGR from 2024 to 2030",
+  "technical_drivers": [
+    "Improved battery technology for longer flight times",
+    "AI-based stabilization and obstacle avoidance",
+    "High-resolution cameras and gimbals",
+    "Autonomous flight modes and intelligent features"
+  ]
+}
